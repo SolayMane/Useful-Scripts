@@ -9,7 +9,7 @@ do
 
 #retrieve the ftp paths for complete genome from assembly summary files
 
-awk -F '\t' ' ($12 == "Complete Genome") && ($11 == "latest") {print $20}' ${genus}.assembly_summary.txt > ${genus}.ftpdirpaths.txt
+awk -F '\t' ' ($12 == "Complete Genome") && ($11 == "latest") {print $20}' ${genus}.assembly.summary.txt > ${genus}.ftpdirpaths.txt
 
 #using the ftp path, donwload the genomes and save them to kingdome folder already created.
         cat ${genus}.ftpdirpaths.txt | while read line
