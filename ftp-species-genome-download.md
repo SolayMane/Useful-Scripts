@@ -15,7 +15,7 @@ awk -F '\t' ' ($12 == "Complete Genome") && ($11 == "latest") {print $20}' ${gen
         cat ${genus}.ftpdirpaths.txt | while read line
         do
 
-#downlonding is performed using aspera software
+#downlonding the genomes, you can donwload proteins changing the file extention to _protein.faa.gz
                 curl https://ftp.ncbi.nlm.nih.gov/genomes/refseq/$genus/${line##*genomes/}/${line##*/}_genomic.fna.gz -o data_fna/$genus/${line##*/}_genomic.fna.gz
         done
 done
