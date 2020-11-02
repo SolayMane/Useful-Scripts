@@ -1,4 +1,4 @@
-# Hello-world
+# Useful scripts
 ## This script aims to donwload complete genome sequence for a given species from bacteria
 ### we will download all summries from bacteria fungi and viral
 ```bash
