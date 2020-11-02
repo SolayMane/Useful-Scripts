@@ -1,10 +1,10 @@
 # Useful scripts
 ## This script aims to donwload complete genome sequence for a given species from bacteria
-### we will download all summries from bacteria fungi and viral
+### we will download all genome summaries from bacteria fungi and virus
 ```bash
 for genus in viral bacteria fungi
 do
-  wget https://ftp.ncbi.nlm.nih.gov/genomes/refseq/$genus/assembly.summary.txt
+  curl https://ftp.ncbi.nlm.nih.gov/genomes/refseq/$genus/assembly.summary.txt -o $genus.assembly.summary.txt
 
 
 #retrieve the ftp paths for complete genome from assembly summary files
